@@ -20,7 +20,7 @@ class Styles {
   final double defaultHeaderHeight;
 }
 
-Styles stylesContants = Styles(
+Styles stylesConstants = Styles(
   defaultPadding: scale(24),
   defaultPaddingVerical: scale(20),
   defaultButtonHeight: scale(48),

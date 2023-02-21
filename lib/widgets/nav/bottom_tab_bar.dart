@@ -45,11 +45,11 @@ class BottomTabBar extends StatelessWidget {
         elevation: 0,
         color: Colors.transparent,
         child: Container(
-          height: stylesContants.defaultTabbarHeight,
+          height: stylesConstants.defaultTabbarHeight,
           margin: EdgeInsets.only(
-            left: stylesContants.defaultTabbarMargin,
-            right: stylesContants.defaultTabbarMargin,
-            bottom: stylesContants.defaultTabbarMargin,
+            left: stylesConstants.defaultTabbarMargin,
+            right: stylesConstants.defaultTabbarMargin,
+            bottom: stylesConstants.defaultTabbarMargin,
           ),
           decoration: BoxDecoration(
             color: ColorContants.main.light.withOpacity(0.9),
