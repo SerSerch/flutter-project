@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertest/providers/profile_provider.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -18,6 +20,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final Profile profile = Provider.of<Profile>(context, listen: false);
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Home'),

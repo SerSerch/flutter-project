@@ -58,3 +58,25 @@ flutter pub global activate build_runner
 ```
 flutter pub run build_runner build
 ```
+
+### config android SHA1
+* add files
+```
+/android/app/debug.jks
+/android/upload-keystore.jks
+/android/key.properties
+```
+* add to 
+```
+// key.properties
+storePassword=test1
+keyPassword=test2
+keyAlias=upload
+storeFile=../upload-keystore.jks
+```
+* test log
+```
+cd android
+./gradlew clean
+./gradlew signinReport
+```

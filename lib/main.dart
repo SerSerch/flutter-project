@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertest/constants/colors.dart';
-import 'package:fluttertest/models/profile.dart';
+import 'package:fluttertest/providers/profile_provider.dart';
 import 'package:fluttertest/routes/router_config.dart';
 import 'package:provider/provider.dart';
 
@@ -13,7 +13,8 @@ void main() {
   ));
   runApp(MultiProvider(
     providers: [
-      ChangeNotifierProvider(create: (_) => Profile()),
+      ChangeNotifierProvider(create: (context) => Profile()),
+      // Provider(create: (context) => SomeOtherClass()),
     ],
     child: const MyApp(),
   ));
@@ -24,12 +25,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final router = routerConfig();
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: 'Flutter test',
-      routeInformationParser: routerConfig.routeInformationParser,
-      routerDelegate: routerConfig.routerDelegate,
-      routeInformationProvider: routerConfig.routeInformationProvider,
+      routeInformationParser: router.routeInformationParser,
+      routerDelegate: router.routerDelegate,
+      routeInformationProvider: router.routeInformationProvider,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

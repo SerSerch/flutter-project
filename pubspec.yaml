@@ -40,6 +40,8 @@ dependencies:
   go_router_builder: ^1.0.16
   provider: ^6.0.5
   shared_preferences: ^2.0.17
+  flutter_keyboard_visibility: ^5.4.0
+  dio: ^5.0.0
 
 dev_dependencies:
   flutter_test:
