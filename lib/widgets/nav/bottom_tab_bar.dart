@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:fluttertest/constants/colors.dart';
 import 'package:fluttertest/constants/styles.dart';
@@ -53,6 +54,17 @@ class _BottomTabBarState extends State<BottomTabBar> {
     // final String location = GoRouterState.of(context).location;
 
     return Scaffold(
+      appBar: AppBar(
+        toolbarHeight: 0,
+        elevation: 0,
+        excludeHeaderSemantics: false,
+        systemOverlayStyle: const SystemUiOverlayStyle(
+          statusBarColor: Colors.transparent,
+          statusBarIconBrightness: Brightness.dark, // For Android
+          statusBarBrightness: Brightness.dark, // For iOS
+        ),
+        shadowColor: Colors.transparent,
+      ),
       body: widget.child,
       extendBody: true,
       bottomNavigationBar: BottomAppBar(
